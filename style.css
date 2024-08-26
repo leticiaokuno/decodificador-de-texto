@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+:root {
+    --cor-background: #F3F5FC;
+    --cor-fonte-primaria: #0A3871;
+    --cor-fonte-secundaria: #343A40;
+    --cor-fonte-terciaria: #495057;
+    --cor-fonte-quaternaria: #0C4B97;
+    --cor-output: #FFFFFF;    
+    --cor-descripto: #D8DFE8;
+
+    --fonte-primaria: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {    
+    background-color:var(--cor-background);
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.logoAlura {
+    margin-left: 2%;
+    padding-top: 2%;
+    width: 7%;
+}
+
+
+
+.decodificador {
+    display: flex;
+    justify-content: space-between;
+}
+
+.decodificador__input {
+    margin: 2% 10% 0% 12%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+        
+}
+
+.decodificador__input__digitar {
+    background: none;
+    font-size: 1.5rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    border: none;    
+}
+::placeholder {color: var(--cor-fonte-primaria);}
+    .decodificador__input__digitar:focus {
+        outline: none;
+    }
+
+.aviso {
+    color: var(--cor-fonte-terciaria);
+    font-size: 0.8rem;
+    font-family: var(--fonte-primaria);
+    padding-bottom: 2%;  
+}
+
+.decodificador__botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0% 0% 5% 0%;
+}
+
+.botao-cripto {
+    color: var(--cor-output);
+    background-color: var(--cor-fonte-primaria);
+    padding: 20px 0px;
+    border: 0;
+    border-radius: 24px;
+    width: 50%;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--fonte-primaria);
+    margin: 0% 0% 8% 0%;
+}
+.botao-cripto:hover {
+    background-color: var(--cor-fonte-quaternaria);
+    cursor: pointer;
+}
+
+.botao-descripto {
+    color: var(--cor-fonte-primaria);
+    background-color: var(--cor-background);
+    padding: 20px 0;
+    border: 1px solid var(--cor-fonte-primaria);
+    border-width: 1px;
+    border-radius: 24px;
+    width: 50%;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--fonte-primaria);
+    margin: 0% 0% 8% 0%;
+}
+.botao-descripto:hover {
+    background-color: var(--cor-descripto);
+    cursor: pointer;
+}
+
+
+
+.decodificador__output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10%;
+    
+}
+
+.decodificador__output__mensagem {
+    background-color: var(--cor-output);
+    background-image: url(./assets/Pessoa.svg);
+    background-position: bottom;
+    background-position-x: 100%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
+    color: var(--cor-fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--fonte-primaria);
+    padding: 30px;
+    margin: 0% 0% 10% 0%;
+}
+.decodificador__output__mensagem:focus {
+    outline: none;
+}
+
+
+.botao-copiar {
+    color: var(--cor-fonte-primaria);
+    background-color: var(--cor-background);
+    font-size: 1rem;
+    font-family: var(--fonte-primaria);
+    margin-top: 0%;
+    margin-bottom: 5%;    
+    padding: 20px 0;
+    border: 1px solid var(--cor-fonte-primaria);
+    border-width: 1px;
+    border-radius: 24px;
+    width: 70%;
+    text-align: center;
+}
+.botao-copiar:hover {
+    background-color: var(--cor-descripto);
+    cursor: pointer;
+}
+
+
+.rodape {
+    padding: 0.5%;
+    background: var(--cor-fonte-primaria);
+    color: var(--cor-output);
+    font-family: var(--fonte-primaria);
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+
+
+@media (max-width: 800px) {
+    .logoAlura {
+        width: 18%;
+    }
+
+
+    .decodificador {
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .decodificador__botoes {
+        flex-direction: column;
+        margin: 0%;
+        gap: 15px;
+    }
+
+    .botao-cripto {
+        width: 100%;
+    }
+
+    .botao-descripto {
+        width: 100%;
+    }
+    
+    .decodificador__output {
+        margin: 0%;
+    }
+
+    .decodificador__output__mensagem {
+        background-image: none;
+        font-size: 1.2rem;
+    }
+
+}
